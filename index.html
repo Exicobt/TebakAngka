@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tebak Kata</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1 class="judul">Game Tebak Angka</h1>
+    <div class="container">
+      <h1 class="game-content">Tebak Angka</h1>
+      <p>Tebak Angka 1-100. Hati-hati BOMM!!!</p>
+      <div class="game">
+        <input type="text" placeholder="Tebak-Angka" class="guess" />
+        <button class="check" onclick="clear()">Tebak</button>
+      </div>
+      <div class="result"></div>
+      <button class="again" onclick="location.reload()">Main lagi</button>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
