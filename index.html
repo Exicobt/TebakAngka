@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tebak Kata</title>
+    <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
@@ -11,8 +12,9 @@
     <div class="container">
       <h1 class="game-content">Tebak Angka</h1>
       <p>Tebak Angka 1-100. Hati-hati BOMM!!!</p>
+      <div class="timer">30s</div>
       <div class="game">
-        <input type="text" placeholder="Tebak-Angka" class="guess" />
+        <input type="number" placeholder="Tebak-Angka" class="guess" />
         <button class="check" onclick="clear()">Tebak</button>
       </div>
       <div class="result"></div>
@@ -20,5 +22,8 @@
     </div>
 
     <script src="index.js"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
