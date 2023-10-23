@@ -4,7 +4,8 @@ const result = document.querySelector(".result");
 const guess = document.querySelector(".guess");
 const waktu = document.querySelector(".timer");
 
-const randomNum = Math.floor(Math.random() * (100) + 1);
+const randomNum = Math.floor(Math.random() * 100 + 1);
+console.log(randomNum);
 let time = 30;
 const interval = setInterval(() => {
   time--;
@@ -14,8 +15,8 @@ const interval = setInterval(() => {
       if (guess.value == randomNum) {
         result.style.color = "#33ff33";
         result.innerHTML = `Tebakan mu Benarr!!!`;
-        waktu.innerHTML = ''
-        clearInterval(interval)
+        waktu.innerHTML = "";
+        clearInterval(interval);
       } else if (guess.value > randomNum + 3 && guess.value <= randomNum + 10) {
         result.innerHTML = "Ayo Semangat!!! Sudah mau dekat";
       } else if (guess.value < randomNum - 3 && guess.value >= randomNum - 10) {
@@ -28,16 +29,12 @@ const interval = setInterval(() => {
         result.innerHTML = "Angka mu terlalu besar!!";
       } else if (guess.value < randomNum - 10) {
         result.innerHTML = "Angka mu terlalu kecil!!";
-      }
-      
-      if (guess.value !== randomNum) {
-        guess.value = ''
-      }
+      } 
     }
   });
-    if (time == 0) {
-      result.innerHTML = `GAME OVER!! Angka nya adalah ${randomNum}`;
-      result.style.color = "red";
-      clearInterval(interval);
-    }
+  if (time == 0) {
+    result.innerHTML = `GAME OVER!! Angka nya adalah ${randomNum}`;
+    result.style.color = "red";
+    clearInterval(interval);
+  }
 }, 1000);
