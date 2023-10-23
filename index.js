@@ -13,8 +13,6 @@ for (let i = 1; i <= 100; i++) {
 const randomNum = Math.floor(Math.random() * num.length);
 const GETNum = num[randomNum];
 
-console.log(GETNum);
-
 tebak.addEventListener("click", () => {
   if (guess.value == GETNum) {
     result.style.color = "#33ff33";
@@ -38,6 +36,7 @@ tebak.addEventListener("click", () => {
   if (guess.value == GETNum) {
     guess.value;
     clearInterval(interval);
+    waktu.innerHTML = ''
   } else {
     guess.value = "";
   }
