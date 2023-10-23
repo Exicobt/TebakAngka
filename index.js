@@ -2,7 +2,7 @@ const tebak = document.querySelector(".check");
 const again = document.querySelector(".again");
 const result = document.querySelector(".result");
 const guess = document.querySelector(".guess");
-const waktu = document.querySelector(".timer")
+const waktu = document.querySelector(".timer");
 
 const num = [];
 
@@ -37,23 +37,23 @@ tebak.addEventListener("click", () => {
 tebak.addEventListener("click", () => {
   if (guess.value == GETNum) {
     guess.value;
+    clearInterval(interval);
   } else {
     guess.value = "";
   }
 });
 
-function timer() {
-    let time = 30
-    const interval = setInterval(() => {
-        time--
-        waktu.innerHTML = time + 's'
+  let time = 30;
+  const interval = setInterval(function timer() {
+    time--;
+    waktu.innerHTML = time + "s";
 
-        if (time === 0) {
-            result.innerHTML = `GAME OVER!! Angka nya adalah ${GETNum}`;
-            result.style.color = "red"
-            clearInterval(interval)
-        }
-    }, 1000);   
-}
+    if (time === 0) {
+      result.innerHTML = `GAME OVER!! Angka nya adalah ${GETNum}`;
+      result.style.color = "red";
+      clearInterval(interval);
+    }
+  }, 1000);
 
-timer()
+  
+
