@@ -29,6 +29,10 @@ const interval = setInterval(() => {
       } else if (guess.value < randomNum - 10) {
         result.innerHTML = "Angka mu terlalu kecil!!";
       }
+      
+      if (guess.value !== randomNum) {
+        guess.value = ''
+      }
     }
   });
     if (time == 0) {
